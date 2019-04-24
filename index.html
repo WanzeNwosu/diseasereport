@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <header>
+            <h1>Monthly Disease Report Form</h1>
+
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Reporting Unit:</legend>
+                <label for="state">State</label>
+                <input type="text" name="gender" id="male" placeholder="State">
+                <label for="lgovt">Local Govt.</label>
+                <input type="text" name="gender" id="female" placeholder="Local Govt">
+                <label for="other">AVO</label>
+                <input type="text" name="gender" id="other" placeholder="AVO">
+                </fieldset>
+                <fieldset>
+                <legend>Reporting Period:</legend>
+                <input type="text" placeholder="Month">
+                <input type="text" placeholder="Year">
+                </fieldset>
+                <fieldset>
+                    <legend>Reporting Officer</legend>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Position">
+                    <input type="tel"  placeholder="Tel No.">
+                    <input type="number" placeholder="VCN No." min="2000" maxlength="5">
+                </fieldset>
+                <fieldset>
+                    <legend>Outbreak</legend>
+                    <input type="text" placeholder="Disease">
+                    <fieldset>
+                        <legend>New or Follow up</legend>
+                        <input type="radio" name="case" id="new" placeholder="New">New<br>
+                         <input type="radio" name="case" id="followup" placeholder="Follow up">Follow up
+                    </fieldset>
+                    <fieldset>
+                        <legend>Date</legend>
+                        <input type="text" placeholder="Occured" onfocus="(this.type='date')" onblur="(this.type='text')"> 
+                        <input type="text" placeholder="Report to Vet" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        <input type="text" placeholder="Investigated" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        <input type="text" placeholder="Final diagnosis" onfocus="(this.type='date')" onblur="(this.type='text')">
+                    </fieldset>
+                    <input type="text" placeholder="Name of affected Village">
+                    <input type="text" placeholder="GPS Location" id="demo" >
+                    <p id="demo"></p>
+                    <button onclick="getLocation()">Try It</button>
+                    <input type="text" placeholder="Species Affected">
+                    <input type="text" placeholder="Age Group">
+                    <fieldset>
+                        <legend>Sex</legend>
+                    <input type="radio" name="sex" id="male" > Male
+                    <input type="radio" name="sex" id="female">Female
+                    </fieldset>
+                    <input type="text" placeholder="Production System">
+                    <input type="text" placeholder="Control Measure">
+                    <input type="text" placeholder="Basis for Diagnosis">
+                    <fieldset>
+                        <legend>Number of Animals</legend>
+                        <input type="number" placeholder="Susceptible">
+                        <input type="number" placeholder="Cases">
+                        <input type="number" placeholder="Deaths">
+                        <input type="number" placeholder="Slaughter">
+                        <input type="number" placeholder="Recovered">
+                        <input type="number" placeholder="Destroyed">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Outbreak stopped?</legend>
+                        <input type="radio" name="outbreakstopped" id="yes">Yes
+                        <input type="radio" name="outbreakstopped" id="no">No
+                    </fieldset>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Vaccination</legend>
+                    <input type="text" placeholder="Disease">
+                    <input type="number" placeholder="Number Control Vaccination">
+                    <input type="number" placeholder="Number Prophyla. Vaccination">
+                    <input type="text" placeholder="Source of Vaccine">
+                    <input type="text" placeholder="Batch Number">
+                    <input type="text" placeholder="Expiry Date">
+                </fieldset>
+            </form>
+
+        </main>
+        <footer>
+
+        </footer>
+
+
+
+        <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+    </body>
+</html>
