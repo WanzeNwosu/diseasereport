@@ -49,7 +49,7 @@
                         <input type="text" placeholder="Final diagnosis" onfocus="(this.type='date')" onblur="(this.type='text')">
                     </fieldset>
                     <input type="text" placeholder="Name of affected Village">
-                    <input type="text" placeholder="GPS Location" id="demo" >
+                    <input type="text" placeholder="GPS Location" id="" >
                     <p id=""></p>
                     <button onclick="getLocation()">Try It</button>
                     <input type="text" placeholder="Species Affected">
@@ -100,7 +100,7 @@
 
 <button onclick="getLocation()">Try It</button>
 
-<p id=""></p>
+<p id="demo"></p>
 
 <script>
 var x = document.getElementById("demo");
@@ -114,7 +114,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  x.value.innerHTML = "Latitude: " + position.coords.latitude + 
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
 }
 </script>
