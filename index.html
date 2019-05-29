@@ -3,7 +3,17 @@
     <head>
         <title>Dx Report</title>
         <meta charset="utf-8">
-        
+        <style>
+            body{
+                background-color: rgb(15, 178, 233);
+                color: white;
+                text-align: justify;
+                line-height: 1.5;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     </head>
     <body>
         <header>
@@ -12,27 +22,32 @@
         </header>
         <main>
             <form>
-                <fieldset>
+                    <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                <fieldset class="">
                     <legend>Reporting Unit:</legend>
-                <label for="state">State</label>
-                <input type="text" name="gender" id="male" placeholder="State">
-                <label for="lgovt">Local Govt.</label>
-                <input type="text" name="gender" id="female" placeholder="Local Govt">
-                <label for="other">AVO</label>
-                <input type="text" name="gender" id="other" placeholder="AVO">
+                <label for="state"></label>
+                <input type="text" name="gender" id="male" placeholder="State" class="form-control ">
+                <label for="lgovt"> </label>
+                <input type="text" name="gender" id="female" placeholder="Local Govt"class="form-control " >
+                <label for="other"></label>
+                <input type="text" name="gender" id="other" placeholder="AVO" class="form-control ">
                 </fieldset>
-                <fieldset>
+                </div>
+                </div>
+                <fieldset class="">
                 <legend>Reporting Period:</legend>
                 <input type="text" placeholder="Month">
                 <input type="text" placeholder="Year">
                 </fieldset>
-                <fieldset>
+                <fieldset class="">
                     <legend>Reporting Officer</legend>
                     <input type="text" placeholder="Name">
                     <input type="text" placeholder="Position">
                     <input type="tel"  placeholder="Tel No.">
                     <input type="number" placeholder="VCN No." min="2000" maxlength="5">
                 </fieldset>
+                
                 <fieldset>
                     <legend>Outbreak</legend>
                     <input type="text" placeholder="Disease">
@@ -117,5 +132,7 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 </script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
     </body>
 </html>
