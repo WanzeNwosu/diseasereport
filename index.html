@@ -21,17 +21,22 @@
 
         </header>
         <main>
-            <form>
+                <p>Click the button to get your coordinates.</p>
+
+                <button onclick="getLocation()">GPS Location</button>
+                
+                <p id="demo"></p>
+            <form method="post" action="form.php">
                     <div class="form-row">
                             <div class="col-md-4 mb-3">
                 <fieldset class="">
                     <legend>Reporting Unit:</legend>
                 <label for="state"></label>
-                <input type="text" name="gender" id="male" placeholder="State" class="form-control ">
+                <input type="text" name="state" id="male" placeholder="State" class="form-control ">
                 <label for="lgovt"> </label>
-                <input type="text" name="gender" id="female" placeholder="Local Govt"class="form-control " >
+                <input type="text" name="localgovt" id="female" placeholder="Local Govt"class="form-control " >
                 <label for="other"></label>
-                <input type="text" name="gender" id="other" placeholder="AVO" class="form-control ">
+                <input type="text" name="avo" id="other" placeholder="AVO" class="form-control ">
                 </fieldset>
                 </div>
                 </div>
@@ -64,9 +69,7 @@
                         <input type="text" placeholder="Final diagnosis" onfocus="(this.type='date')" onblur="(this.type='text')">
                     </fieldset>
                     <input type="text" placeholder="Name of affected Village">
-                    <input type="text" placeholder="GPS Location" id="" >
-                    <p id=""></p>
-                    <button onclick="getLocation()">Try It</button>
+                    
                     <input type="text" placeholder="Species Affected">
                     <input type="text" placeholder="Age Group">
                     <fieldset>
@@ -102,6 +105,7 @@
                     <input type="text" placeholder="Batch Number">
                     <input type="text" placeholder="Expiry Date">
                 </fieldset>
+                <input type="submit" value="Submit">
             </form>
 
         </main>
@@ -111,11 +115,7 @@
 
 
 
-        <p>Click the button to get your coordinates.</p>
-
-<button onclick="getLocation()">Try It</button>
-
-<p id="demo"></p>
+       
 <script>
 var x = document.getElementById("demo");
 
